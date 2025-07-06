@@ -58,6 +58,7 @@ class MainActivity : ComponentActivity() {
 fun BusinessCardLayout(modifier: Modifier = Modifier) {
     val usedIcons = Icons.Rounded
     val image = painterResource(R.drawable.android_logo)
+    val bgColor = Color(0xff4f5f76)
     val fontColor = Color(0xfffaebd7)
     val usedFontSize = 16.sp
     Column(
@@ -65,7 +66,7 @@ fun BusinessCardLayout(modifier: Modifier = Modifier) {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier
             .fillMaxSize()
-            .background(color = Color(0xff4f5f76))
+            .background(color = bgColor)
     ) {
         Image(
             painter = image,
@@ -170,21 +171,4 @@ fun BusinessCardLayout(modifier: Modifier = Modifier) {
 @Composable
 fun BusinessCardPreview() {
     BusinessCardLayout()
-}
-
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    BusinesssCardTheme {
-        Greeting("Android")
-    }
 }
